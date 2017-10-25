@@ -1,0 +1,14 @@
+<!DOCTYPE html>  
+<html>  
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
+<body> 
+<div ng-app="">
+  <form>
+  check to show this :
+  <input type="checkbox" ng-model="myVar">
+  </form>
+  <h1 hg-show="myVar">checked</h1>
+</div>
+  <p>the ng-show attribute is set to true whene the checkbox is checked </p>
+</body>
+</html>
