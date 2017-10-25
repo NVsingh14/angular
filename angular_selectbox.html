@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Js</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="">
+	<form>
+		Select a Topic: 
+		<select ng-model="myVar">  
+    		<option value="">  
+    		<option value="tuts">Tutorials  
+    		<option value="fest">Festivals  
+    		<option value="news">News  
+  		</select>  
+	</form>
+	<div ng-switch="myVar">
+		<div ng-switch-when="tuts">
+			<h1>Tutorials</h1>
+			<p>Welcome to the bese tutorial over the net</p>
+		</div>
+		<div ng-switch-when="fest">
+			<h1>Festivals</h1>
+			<p>Most famous Festivals</p>
+		</div>
+		<div ng-switch-when="news">
+			<h1>News</h1>
+			<p>Welcome to News</p>
+		</div>
+	</div>
+</body>
+</html>
