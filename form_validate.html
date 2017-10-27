@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Js</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
+</head>
+<body ng-app="validateApp" ng-controller="validateCtrl">
+	<div class="container">
+		<div class="page-header">Angular js Form Validation</div>
+		<form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate="novalidate">
+			<div class="form-group" ng-class="{'has-error':userForm.name.$invalid && !userForm.name.$pristine}">
+				<label>Name</label>
+				<input type="text" name="name" class="form-control" ng-model="user.name" required="required">
+				<span ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your Name is Required</span>
+			</div> 
+			<div class="form-group" ng-class="{'has-error': userForm.username.$invalid && !userForm.username.$pristine}">
+				<label>Username</label>
+				<input type="text" name="username" ng-model="user.username" ng-minlength="3" ng-maxlength="8">
+				<span ng-show="userForm.username.$error.minlength" class="help-block">usename is too short</span>
+				<span ng-show="userForm.username.$error.maxlength" class="help-block">username is too long</span>
+			</div>
+
+			<div class="form-group" ng-class="{'has-error': userForm.email.$invalid && !userForm.email.$pristine}">
+				<input type="email" name="email" ng-model="user.email">
+				<span ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter Valid email</span>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var app = angular.module('validateApp',[]);
+		app.controller('validateCtrl', function($scope){
+			$scope.submitForm = function(isValid)
+			{
+				//check to make sure the form is completely  valid
+				if(isValid){
+					alert("hello");
+				}
+			};
+		});
+
+	</script>
+</body>
+</html>
