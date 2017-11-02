@@ -1,0 +1,38 @@
+<h2 class="page-header">Create Your Profile</h2>
+<span ng-model="result" class="alert alert-success" ng-show="show">{{result}}</span>
+	<form class="form-horizontal" name="userFrm" id="userFrm" novalidate="novalidate">
+    			<div class="row">
+    			<div class="form-group col-md-6">
+  					<label class="control-label" for="inputDefault">Name</label>
+  					<input type="text" class="form-control" ng-model="name" id="name" required="required">
+				</div>
+			</div><br/>
+			<div class="row">
+				<div class="form-group col-md-6" >
+ 					 	<label class="control-label" for="inputDefault">Email</label>
+  						<input type="email" class="form-control" id="email" ng-model="email" required="required">
+				</div>
+			</div><br/>
+			<div class="row">
+				<div class="form-group col-md-6">
+ 					 	<label class="control-label" for="inputDefault">Mobile</label>
+  						<input type="text" class="form-control" ng-model="mobile" id="mobile" required="required">	
+				</div>
+			</div><br/>
+			<div class="row">
+				<div class="form-group col-md-6" >
+ 					 	<label class="control-label" for="inputDefault">Password</label>
+  						<input type="password" class="form-control" id="password" ng-model="password" required="required">	
+				</div>
+			</div><br/>
+			<div class="row">
+				<div class="form-group col-md-6">
+ 					 	<label class="control-label" for="inputDefault">Confirm Password</label>
+  						<input type="password" class="form-control" id="cPass" ng-model="cPass" required="required">
+				</div>
+			</div><br/>
+				<div class="row">
+				<input type="submit" class="btn btn-success" ng-click="register(userFrm.$valid)" value="Submit" ng-disabled="userFrm.$invalid">
+				<a href="#/login" class="btn btn-primary">Login</a>
+				</div>
+   </form>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="schoolApp">
+<head>
+	<title>Angular Js</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.0-rc.0/angular-messages.min.js"></script>
+	<script type="text/javascript" src="angular_function/routing.js"></script>
+	<script type="text/javascript" src="angular_function/signup.js"></script>
+	<script type="text/javascript" src="angular_function/login.js"></script>
+	<script type="text/javascript" src="angular_function/image.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">School Demo</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/login">Login <span class="sr-only">(current)</span></a></li>
+        <li><a href="#/signup">Signup</a></li>
+        <li><a href="#/image_upload">Other Details</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+		</div>
+
+		<div class="jumbotron" ng-view="">
+		</div>
+	</div> <!-- end of container -->
+
+</body>
+</html>

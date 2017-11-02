@@ -1,0 +1,19 @@
+	<h2 class="page-header">Login User</h2>
+	<form class="form-horizontal" name="userLogin" id="userLogin" role="form" novalidate="novalidate">
+    			<div class="row">
+    			<div class="form-group col-md-6">
+  					<label class="control-label" for="inputDefault">Username</label>
+  					<input type="email" class="form-control" required="required" ng-model="username" id="username">
+				</div>
+			</div><br/>
+			<div class="row">
+				<div class="form-group col-md-6">
+ 					 	<label class="control-label" for="inputDefault">Password</label>
+  						<input type="text" class="form-control" id="password" ng-model="password" required="required">
+				</div>
+			</div><br/>
+				<div class="row">
+				<input type="submit" class="btn btn-success" ng-click="logme(userLogin.$valid)" ng-disabled="userLogin.$invalid" value="Logme">
+				<a href="#/signup" class="btn btn-primary">Sign Up</a>
+				</div>
+    		</form>

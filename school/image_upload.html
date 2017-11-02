@@ -1,0 +1,14 @@
+	<h2 class="page-header">Image Upload</h2>
+	<form class="form-horizontal" name="imgFrm" id="imgFrm" role="form" ng-submit="image_upload()" novalidate="novalidate">
+    			<div class="row">
+    			<div class="form-group col-md-6">
+  					<label class="control-label" for="inputDefault">Image</label>
+  					<input type="file" class="form-control" ng-model="imgFrm.image" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)">
+				</div>
+			</div><br/>
+				<div class="row">
+				<input type="submit" class="btn btn-warning" ng-disabled="userLogin.$invalid" value="Upload">
+				<br/>
+				<img ng-src="{{image_source}}" style="width: 300px;">
+				</div>
+    		</form>
